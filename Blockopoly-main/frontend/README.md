@@ -28,3 +28,9 @@
 | Backend      | Kotlin                         |
 
 ---
+
+---
+
+### Connecting to the Example Backend
+
+To try the multiplayer room functionality, first start the backend server in `../backend`. The frontend can then join a room by sending a `POST` request to `/create-room` and connecting to the Socket.IO gateway at the same host. This README does not include a full implementation, but the backend server demonstrates how rooms are managed.
