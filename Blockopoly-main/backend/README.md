@@ -1,6 +1,12 @@
+# Backend
+
+This is a minimal Node.js server providing room creation and WebSocket-based
+communication for a multiplayer version of Blockopoly.
+=======
 # Backend Server
 
 This directory contains a minimal Node.js server providing simple room creation and real-time communication via WebSockets. It exposes two HTTP endpoints and a Socket.IO gateway.
+
 
 ## Setup
 
@@ -11,6 +17,14 @@ npm install
 ## Running
 
 ```bash
+node server.js
+```
+
+The server exposes an HTTP endpoint `/create-room` which returns a randomly
+generated room code. Clients connect via WebSocket (Socket.IO) and emit
+`join-room` with the room code to join a room. Messages sent with the `message`
+event are broadcast to all other players in the same room.
+=======
 npm start
 ```
 
